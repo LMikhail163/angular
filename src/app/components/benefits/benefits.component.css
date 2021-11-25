@@ -1,0 +1,53 @@
+.watch {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+    
+.watch__series7 {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+    
+.watch__information {
+    background-color: #333333;
+    width: 100%;
+}
+    
+.watch__photo img {   
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+}   
+    
+.watch__information h2 {
+    font-weight: bold;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    margin-top: 18px;
+}
+    
+.watch__benefits-item {
+    color: #86868b;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 30px;
+}
+    
+.watch__benefits-item::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    max-width: 490px;
+    border-top: 4px solid #515154;
+    opacity: 0.5;
+    padding-top: 36px;
+}
+    
+.watch__benefits-item:nth-child(1)::before {
+    border-top: 1px solid #ffff;
+    max-width: 100%;
+}

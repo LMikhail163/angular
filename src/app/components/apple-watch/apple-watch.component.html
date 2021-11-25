@@ -1,0 +1,7 @@
+<section class="catalog">
+    <h2 class="catalog__title">{{catalog__title}}</h2>
+    <input type="text" placeholder="Search..." [(ngModel)]="search" (keyup.enter)='onSearch()'>
+    <div class="catalog__content">
+        <app-product-card *ngFor="let item of products" [product]="item" [isInCart]="true" [isInCartCross]="false"></app-product-card>
+    </div>
+</section>

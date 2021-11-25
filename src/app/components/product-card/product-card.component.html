@@ -1,0 +1,19 @@
+<div class="catalog__item">
+  <div class="cross-сlose" *ngIf="isInCartCross" (click)="deleteProduct()"></div>
+  <div class="catalog__item-wrapper">
+    <div class="catalog__item-content">
+      <img alt="watch" class="catalog__item-img" src="{{product.img}}"/>
+    </div>
+    <div class="catalog__item-subtitle" [ngStyle]="isInCartCross ? {'color': '#b7b5d5'} : null">{{product.model}}</div>
+    <div class="catalog__item-descr" [ngStyle]="isInCartCross ? {'color': '#b7b5d5'} : null">{{product.descr}}</div>
+    <a class="catalog__item-link" *ngIf="isInCart" routerLink="/product/{{product.model}}" >{{product.link}}</a>
+  </div>
+  <hr/>
+  <div class="catalog__item-footer"[ngStyle]="isInCartCross ? {'margin-top': '40px', 'display': 'revert'} : null">
+    <div class="catalog__item-prices">
+      <div class="catalog__item-price" [ngStyle]="isInCartCross ? {'color': '#b7b5d5'} : null">{{product.price}}</div>
+      <div class="catalog__item-prices-rub" [ngStyle]="isInCartCross ? {'color': '#b7b5d5'} : null">руб.</div>
+    </div>
+    <button class="button" (click)="buy()" *ngIf="isInCart">{{buttonText}}</button>
+  </div>
+</div>
