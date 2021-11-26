@@ -5,8 +5,3 @@ export interface Product {
   link?: string;
   price: number;
 }
-
-export enum ChangeCountActions {
-  INCREASE = "increase",
-  DECREASE = "decrease"
-}
