@@ -20,7 +20,7 @@ export class AppleWatchComponent implements OnInit {
   }
 
   onSearch(): void {
-    this.router.navigate(['/shop'], {
+    this.router.navigate(['/product/:model'], {
       queryParams: {
         search: this.search
       }

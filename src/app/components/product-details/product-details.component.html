@@ -1,6 +1,9 @@
 <app-header></app-header>
 <h1>Product Details</h1>
 <div class="wrapper">
+    <div class="catalog__item-content">
+        <img alt="watch" class="catalog__item-img" src="{{product?.img}}"/>
+      </div>
     <div class="catalog__item-subtitle">{{product?.model}}</div>
     <div class="catalog__item-descr">{{product?.descr}}</div>
 </div>
