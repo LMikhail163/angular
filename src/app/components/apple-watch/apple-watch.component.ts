@@ -13,13 +13,14 @@ export class AppleWatchComponent implements OnInit {
   products!: Product[];
   buttonText = 'Купить';
   search = '';
+  productList!: Product[];
 
   constructor(private productService: ProductService,
               private activatedRoute: ActivatedRoute) {
   }
 
   onSearch(): void {
-    this.productService.getActiveProduct();
+    this.products = this.productService.getActiveProduct(this.search);
   }
 
   ngOnInit(): void {

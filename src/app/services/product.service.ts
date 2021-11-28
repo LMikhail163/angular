@@ -77,7 +77,7 @@ export class ProductService {
             price: 11000
         },
     ];
-    product: any;
+    product!: Product[];
 
     addProductToCart(product: Product) : void {
         this.productsInCart.push(product);
