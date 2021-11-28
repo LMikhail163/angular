@@ -6,7 +6,7 @@ app.get('/products', (req, res) => {
   const products = [
         {
             img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch1',
+            model: 'Apple Watch 1',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 10000
@@ -14,7 +14,7 @@ app.get('/products', (req, res) => {
 
         {
             img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch2',
+            model: 'Apple Watch 2',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 11000
@@ -22,7 +22,7 @@ app.get('/products', (req, res) => {
 
         {
             img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch3',
+            model: 'Apple Watch 3',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 12000
@@ -30,7 +30,7 @@ app.get('/products', (req, res) => {
 
         {
             img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch4',
+            model: 'Apple Watch 4',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 11000
@@ -38,7 +38,7 @@ app.get('/products', (req, res) => {
         
         {
             img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch5',
+            model: 'Apple Watch 5',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 14000
@@ -46,7 +46,7 @@ app.get('/products', (req, res) => {
         
         { 
             img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch6',
+            model: 'Apple Watch 6',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 13000
@@ -54,7 +54,7 @@ app.get('/products', (req, res) => {
         
         {
             img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch7',
+            model: 'Apple Watch 7',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 12000
@@ -62,7 +62,7 @@ app.get('/products', (req, res) => {
         
         {
             img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch8',
+            model: 'Apple Watch 8',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 10000
@@ -70,7 +70,7 @@ app.get('/products', (req, res) => {
         
         {
             img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch9',
+            model: 'Apple Watch 9',
             descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
             link: 'Подробнее',
             price: 11000

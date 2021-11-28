@@ -1,82 +1,18 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable} from "@angular/core";
+import { Observable } from "rxjs";
 import { Product } from "../models/product.model";
 
 @Injectable()
 export class ProductService {
+    constructor(private httpClient: HttpClient) {}
+
+    getProducts(): Observable<Product[]> {
+        return this.httpClient.get<Product[]>('/products');
+    }
+
     productsInCart: Product[] = [];
-    productList: Product[] = [
-        {
-            img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch1',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 10000
-        },
-
-        {
-            img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch2',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 11000
-        },
-
-        {
-            img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch3',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 12000
-        },
-
-        {
-            img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch4',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 11000
-        },    
-        
-        {
-            img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch5',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 14000
-        },
-        
-        { 
-            img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch6',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 13000
-        },
-        
-        {
-            img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch7',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 12000
-        },
-        
-        {
-            img: 'https://wmpics.pics/dm-AFAR.png',
-            model: 'Apple Watch8',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 10000
-        },    
-        
-        {
-            img: 'https://wmpics.pics/dm-857S.png',
-            model: 'Apple Watch9',
-            descr: 'Для первых шагов в тренировках, основанных на сердечном ритме',
-            link: 'Подробнее',
-            price: 11000
-        },
-    ];
+    productList: Product[] = [];
 
     public addProductToCart(product: Product) : void {
         this.productsInCart.push(product);
@@ -89,7 +25,6 @@ export class ProductService {
     isShowCart: boolean = false;
 
     public showCart(){
-        console.log(this.productList);
       this.isShowCart = true;
     }
   
