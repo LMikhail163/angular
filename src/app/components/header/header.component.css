@@ -12,7 +12,7 @@
 }
     
 .header__nav-menu li, a {
-    display: inline-block;
+    display: flex;
     color: #fff;
     text-decoration: none;
     padding: 10px;
@@ -36,6 +36,17 @@
 .header__nav-menu {
     display: flex;
     justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.menu_item-input {
+    align-items: center;
+    display: flex;
+    
 }
     
 .menu_link-bag {

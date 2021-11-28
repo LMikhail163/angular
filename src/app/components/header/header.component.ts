@@ -1,7 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { ActivatedRoute, ParamMap} from '@angular/router';
 import { Product } from 'src/app/models/product.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
 
   constructor(protected productService: ProductService,
-              private activatedRoute: ActivatedRoute) {
+              private router: Router) {
   }
 
   showCart():void{
@@ -23,15 +24,15 @@ export class HeaderComponent implements OnInit {
   }
 
   onSearch(): void {
-    this.products = this.productService.getActiveProduct(this.search);
+    this.router.navigate(['shop'], {
+      queryParams: {
+        search: this.search
+      }
+    });
   }
 
 
   ngOnInit(): void {
-    // this.products = this.productService.productList;
-    // this.activatedRoute.queryParamMap.subscribe((params: ParamMap) => {
-    // const search = params.get('search') || '';
-    // this.products = this.productService.getActiveProduct(search);
-    // });
+
   }
 }
