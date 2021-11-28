@@ -15,16 +15,11 @@ export class AppleWatchComponent implements OnInit {
   search = '';
 
   constructor(private productService: ProductService,
-              private router: Router,
               private activatedRoute: ActivatedRoute) {
   }
 
   onSearch(): void {
-    this.router.navigate(['/product/:model'], {
-      queryParams: {
-        search: this.search
-      }
-    });
+    this.productService.getActiveProduct();
   }
 
   ngOnInit(): void {

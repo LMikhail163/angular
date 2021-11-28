@@ -79,21 +79,21 @@ export class ProductService {
     ];
     product: any;
 
-    public addProductToCart(product: Product) : void {
+    addProductToCart(product: Product) : void {
         this.productsInCart.push(product);
     }
-    public deleteProductFromCart(product: Product) : void {
+    deleteProductFromCart(product: Product) : void {
         let findIndex = this.productsInCart.findIndex((data: Product) => data.model === product.model);
         this.productsInCart.splice(findIndex, 1);
     }
 
     isShowCart: boolean = false;
 
-    public showCart(){
+    showCart(){
       this.isShowCart = true;
     }
   
-    public closeCart(){
+    closeCart(){
       this.isShowCart = false;
     }
 
