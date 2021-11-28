@@ -12,6 +12,7 @@
                 <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop'>Watch</a></li>
                 <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop'>iPad</a></li>
                 <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop'>Mac</a></li>
+                <li class="menu_item"><input type="text" placeholder="Search..." [(ngModel)]="search" (keyup.enter)='onSearch()'></li>
                 <li class="menu_item menu_item-bag">
                     <div class="menu_link-bag" (click) = "showCart()" routerLink='/cart'></div>
                 </li>

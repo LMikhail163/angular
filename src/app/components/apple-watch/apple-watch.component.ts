@@ -13,21 +13,11 @@ export class AppleWatchComponent implements OnInit {
   products!: Product[];
   buttonText = 'Купить';
   search = '';
-  productList!: Product[];
 
-  constructor(private productService: ProductService,
-              private activatedRoute: ActivatedRoute) {
-  }
-
-  onSearch(): void {
-    this.products = this.productService.getActiveProduct(this.search);
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
     this.products = this.productService.productList;
-    this.activatedRoute.queryParamMap.subscribe((params: ParamMap) => {
-      const search = params.get('search') || '';
-      this.products = this.productService.getActiveProduct(search);
-    });
   }
 }

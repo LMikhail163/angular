@@ -1,10 +1,9 @@
-import { Injectable} from "@angular/core";
-import { Product } from "../models/product.model";
+const express = require('express');
+const app = express();
+const port = 3000;
 
-@Injectable()
-export class ProductService {
-    productsInCart: Product[] = [];
-    productList: Product[] = [
+app.get('/products', (req, res) => {
+  const products = [
         {
             img: 'https://wmpics.pics/dm-AFAR.png',
             model: 'Apple Watch1',
@@ -77,44 +76,9 @@ export class ProductService {
             price: 11000
         },
     ];
+  res.send(products);
+});
 
-    public addProductToCart(product: Product) : void {
-        this.productsInCart.push(product);
-    }
-    public deleteProductFromCart(product: Product) : void {
-        let findIndex = this.productsInCart.findIndex((data: Product) => data.model === product.model);
-        this.productsInCart.splice(findIndex, 1);
-    }
-
-    isShowCart: boolean = false;
-
-    public showCart(){
-        console.log(this.productList);
-      this.isShowCart = true;
-    }
-  
-    public closeCart(){
-      this.isShowCart = false;
-    }
-
-    getProduct(model: string): Product | null {
-        const product = this.productList.find((item: Product) => {
-            return item.model === model;
-        });
-        if(product) {
-            return product;
-        } else {
-            const productInCart = this.productsInCart.find((item: Product) => {
-                return item.model === model;
-            });
-          return productInCart ? productInCart : null;
-        }
-    }
-
-    getActiveProduct(search: string = ''): Product[] {
-        return this.productList.filter((item: Product) => {
-            return item.model.toLocaleLowerCase().includes(search.toLocaleLowerCase())
-            || item.descr.toLocaleLowerCase().includes(search.toLocaleLowerCase())
-        });
-    }
-}
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
