@@ -14,6 +14,6 @@
       <div class="catalog__item-price" [ngStyle]="isInCartCross ? {'color': '#b7b5d5'} : null">{{product.price}}</div>
       <div class="catalog__item-prices-rub" [ngStyle]="isInCartCross ? {'color': '#b7b5d5'} : null">руб.</div>
     </div>
-    <button class="button" (click)="buy()" *ngIf="isInCart">{{buttonText}}</button>
+    <button class="button" (click)="buy()" *ngIf="isInCart">Купить</button>
   </div>
 </div>
