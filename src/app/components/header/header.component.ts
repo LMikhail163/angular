@@ -10,18 +10,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  products!: Product[];
   search = '';
 
+  products!: Product[];
 
   constructor(protected productService: ProductService,
-              private router: Router) {
-  }
-
-  showCart():void{
-    this.productService.showCart();
-    document.body.style.overflow = 'hidden';
-  }
+              private router: Router) {}
 
   onSearch(): void {
     this.router.navigate(['shop'], {

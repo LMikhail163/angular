@@ -5,15 +5,15 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-apple-watch',
-  templateUrl: './apple-watch.component.html',
-  styleUrls: ['./apple-watch.component.css']
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css']
 })
-export class AppleWatchComponent implements OnInit {
+export class productsComponent implements OnInit {
   catalog__title = 'Каталог Apple Watch';
-  products!: Product[];
   buttonText = 'Купить';
   search = '';
+  products!: Product[];
   products$: Subject<Product[]> = new Subject();
 
   constructor(private productService: ProductService,

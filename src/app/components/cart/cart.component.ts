@@ -8,6 +8,8 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  @Input() active!: boolean;
+
   products!: Product[];
 
   constructor(protected productService: ProductService) {
@@ -15,11 +17,6 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = this.productService.productsInCart;
-  }
-
-  closeCart(): void {
-    this.productService.closeCart();
-    document.body.style.overflow = 'auto';
   }
 }
 

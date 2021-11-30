@@ -12,7 +12,9 @@ export class ProductCardComponent  {
   @Input() product!: Product;
   @Input() isInCart!: boolean;
   @Input() isInCartCross!: boolean;
+
   buttonText = 'Купить';
+  
   constructor(protected productService: ProductService) {
   }
 

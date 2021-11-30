@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppleWatchComponent } from './components/apple-watch/apple-watch.component';
+import { productsComponent } from 'src/app/components/products/products.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,7 +19,7 @@ import { MainComponent } from './components/main/main.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AppleWatchComponent,
+    productsComponent,
     ProductCardComponent,
     HeaderComponent,
     FooterComponent,
