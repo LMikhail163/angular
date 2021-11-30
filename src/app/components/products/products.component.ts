@@ -11,7 +11,6 @@ import { Subject } from 'rxjs';
 })
 export class productsComponent implements OnInit {
   catalog__title = 'Каталог Apple Watch';
-  buttonText = 'Купить';
   search = '';
   products!: Product[];
   products$: Subject<Product[]> = new Subject();
