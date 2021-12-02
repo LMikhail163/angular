@@ -28,6 +28,8 @@ export class productsComponent implements OnInit {
     this.activatedRoute.queryParamMap.subscribe((params: ParamMap) => {
     const search = params.get('search') || '';
     this.products = this.productService.getActiveProduct(search);
+    //В консоль продукт выводит, но на странице ничего не меняется 
+    console.log(this.products);
     });
   }
 }

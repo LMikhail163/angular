@@ -14,7 +14,7 @@ export class ProductService {
         return this.httpClient.get<Product[]>('/products')
             .pipe(map(response => {
                 if(response) {
-                    return Object.values(response);
+                    return this.productList = response;
                 }
                 return [];
             }));
@@ -22,7 +22,6 @@ export class ProductService {
 
     addProductToCart(product: Product) : void {
         this.productsInCart.push(product);
-        console.log(this.httpClient.get<Product[]>('/products'));
     }
     
     deleteProductFromCart(product: Product) : void {
