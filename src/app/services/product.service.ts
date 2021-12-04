@@ -11,7 +11,7 @@ export class ProductService {
     constructor(private httpClient: HttpClient) {}
 
     getProducts(): Observable<Product[]> {
-        return this.httpClient.get<Product[]>('/products')
+        return this.httpClient.get<Product[]>('http://localhost:3000/products')
             .pipe(map(response => {
                 if(response) {
                     return this.productList = response;

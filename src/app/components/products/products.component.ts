@@ -12,7 +12,6 @@ import { Subject } from 'rxjs';
 export class productsComponent implements OnInit {
   catalog__title = 'Каталог Apple Watch';
   search = '';
-  products!: Product[];
   products$: Subject<Product[]> = new Subject();
 
   constructor(private productService: ProductService,
@@ -24,12 +23,10 @@ export class productsComponent implements OnInit {
       .subscribe((products: Product[]) => {
         this.products$.next(products);
     });
-    this.products = this.productService.productList;
-    this.activatedRoute.queryParamMap.subscribe((params: ParamMap) => {
-    const search = params.get('search') || '';
-    this.products = this.productService.getActiveProduct(search);
-    //В консоль продукт выводит, но на странице ничего не меняется 
-    console.log(this.products);
+    this.activatedRoute.queryParamMap
+      .subscribe((params: ParamMap) => {
+      const search = params.get('search') || '';
+      this.products$.next(this.productService.getActiveProduct(search));
     });
   }
 }
