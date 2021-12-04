@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class productsComponent implements OnInit {
+export class ProductsComponent implements OnInit {
   catalog__title = 'Каталог Apple Watch';
   search = '';
   products$: Subject<Product[]> = new Subject();
