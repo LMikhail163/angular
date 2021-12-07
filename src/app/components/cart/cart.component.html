@@ -1,6 +1,6 @@
 <section class="shopping-cart">
     <div class="cart">
-        <div class="heading">Ваши товары</div>
+        <h2 class="heading">Ваши товары</h2>
         <div class="cart-field">
             <app-product-card *ngFor="let item of products" [product]="item" [isInCart]="false" [isInCartCross]="true"></app-product-card>
         </div>
