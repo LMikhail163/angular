@@ -64,14 +64,3 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
 }
-
-/* @media (max-width: 480px) {
-    .cart {
-        height: unset;
-    }
-
-    .cart-field {
-        height: 100%;
-    }
-    
-} */
