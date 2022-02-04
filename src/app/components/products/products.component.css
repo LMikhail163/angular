@@ -159,3 +159,17 @@ input {
     display: block;
     margin: 0 auto; 
 }
+
+@media (max-width: 768px) {
+    .catalog__content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog__title {
+        display: flex;
+        font-size: 24px;
+        margin-bottom: 25px;
+    } 
+}

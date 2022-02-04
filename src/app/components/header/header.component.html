@@ -1,17 +1,25 @@
 <header class="header">
     <div class="header__wrapper">
         <div class="header__logo">
-        <a href="#">
-            <img src="https://svgshare.com/i/b1J.svg" alt="logo" />
-        </a>
+            <a class="logo" href="#">
+                <img src="https://svgshare.com/i/b1J.svg" alt="logo" />
+            </a>
         </div>
+
+        <input type="checkbox" id="check-manu">
+        <label for="check-manu"></label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+
         <nav class="header__nav">
             <ul class="header__nav-menu">
                 <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop' >Главная</a></li>
-                <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop'>iPhone</a></li>
-                <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop'>Watch</a></li>
-                <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop'>iPad</a></li>
-                <li class="menu_item"><a href="#" class="menu_link" routerLink='/shop'>Mac</a></li>
+                <li class="menu_item"><a href="#" class="menu_link" routerLink='/iPhone'>iPhone</a></li>
+                <li class="menu_item"><a href="#" class="menu_link" routerLink='/Watch'>Watch</a></li>
+                <li class="menu_item"><a href="#" class="menu_link" routerLink='/iPad'>iPad</a></li>
+                <li class="menu_item"><a href="#" class="menu_link" routerLink='/Mac'>Mac</a></li>
                 <li class="menu_item menu_item-input"><input type="text" placeholder="Search..." [(ngModel)]="search" (keyup.enter)='onSearch()'></li>
                 <li class="menu_item menu_item-bag">
                     <div class="menu_link-bag" routerLink='/cart'></div>

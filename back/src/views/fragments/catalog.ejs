@@ -1,0 +1,25 @@
+<section class="catalog">
+  <h2 class="catalog__title">Каталог Apple Watch</h2>
+  <div class="catalog__content">
+      <% products.forEach(product => { %>
+        <div class="catalog__item" id="<%=product.id%>" product-data="<%=JSON.stringify(product)%>" >
+          <div class="catalog__item-wrapper">
+            <div class="catalog__item-content">
+              <img alt="watch" class="catalog__item-img" src="<%= product.img %>" />
+            </div>
+            <div class="catalog__item-subtitle"><%= product.model %></div>
+            <div class="catalog__item-descr"><%= product.descr %></div>
+            <a href="#" class="catalog__item-link"><%= product.link %></a>
+          </div>
+          <hr />
+          <div class="catalog__item-footer">
+            <div class="catalog__item-prices">
+              <div class="catalog__item-price"><%= product.price %></div>
+              <div class="catalog__item-prices-rub">руб.</div>
+            </div>
+            <button class="button" onclick=addProduct(<%= product.id %>)>Купить</button>
+          </div>
+        </div>
+      <%  }); %>
+  </div>    
+</section>

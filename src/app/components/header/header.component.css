@@ -6,9 +6,11 @@
 }
     
 .header__wrapper {
-    height: inherit;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-around;
+    position: relative;
 }
     
 .header__nav-menu li, a {
@@ -41,12 +43,12 @@
 input {
     width: 100%;
     border-radius: 5px;
+    background-color: #333333;
 }
 
 .menu_item-input {
     align-items: center;
     display: flex;
-    
 }
     
 .menu_link-bag {
@@ -69,4 +71,158 @@ input {
     
 .header__logo img {
     width: 38px;
+}
+
+#check-manu {
+    display: none;
+}
+
+/* Медиа запросы */
+
+@media (max-width: 1024px) {
+    .header {
+        width: 100vw;
+        margin-bottom: 40px;
+    }
+        
+    .header__nav-menu li, a {
+        padding: 10px;
+        margin-right: 45px;
+    }
+    
+    .menu_item {
+        width: 60px;
+    }
+    
+    input {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+        
+    .header__nav-menu li, a {
+        padding: 10px;
+        margin-right: 25px;
+    }
+    
+    .menu_item {
+        width: 50px;
+    }
+        
+    .menu_link-bag {
+        background-size: 20px 48px;
+        padding: 10px;
+        margin-top: 2px;
+    }
+ 
+    .header__logo img {
+        width: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__wrapper {
+        z-index: 4;
+    }
+
+    .header__logo a {
+        padding: 0;
+        display: block;
+        margin: 10px auto;
+    }
+
+    /*  Бургер меню */
+    #check-manu {
+        display: none;
+    }
+
+    label {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 4;
+        line-height: 60px;
+    }
+
+    .burger-line {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 35px;
+        height: 2px;
+        background-color: #fff;
+        transition: .5s all;
+    }
+
+    .second, .third {
+        top: 30px;
+    }
+
+    .fourth {
+        top: 40px;
+    }
+
+    .header__nav {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        max-height: 0;
+        font-size: 0;
+        overflow: hidden;
+        transition: .5s all;
+    }
+
+    .header__nav-menu {
+        background-color: #333333;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+        
+    .menu_item {
+        margin-bottom: 10px;
+    }
+
+    input {
+        width: 70px;
+    }
+
+    .menu_link-bag {
+        background-size: 20px 48px;
+        padding: 15px;
+    }
+
+    #check-manu:checked ~ .header__nav {
+        max-height: 500px;
+        font-size: 16px;
+    }
+
+    #check-manu:checked ~ .first {
+        display: none;
+    }
+
+    #check-manu:checked ~ .second {
+        transform: rotate(45deg);
+    }
+
+    #check-manu:checked ~ .third {
+        transform: rotate(-45deg);
+    }
+
+    #check-manu:checked ~ .fourth {
+        display: none;
+    }
 }

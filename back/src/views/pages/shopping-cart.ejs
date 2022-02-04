@@ -1,0 +1,56 @@
+<%- include('../fragments/header.ejs'); %>
+
+<section class="shopping-cart">
+    <div id="templateAll">
+      <div class="cart">
+        <div class="heading">Ваши товары</div>
+        <div class="cart-field">
+          <% products.forEach(product => { %>
+            <div class="catalog__item-bag" id="<%=product.id%>" product-data="<%=JSON.stringify(product)%>">
+              <div class="cross-сlose"  onclick="crossClose(<%= product.id %>);"></div>
+              <div class="catalog__item-wrapper">
+                <div class="catalog__item-content">
+                  <img alt="watch" class="catalog__item-img" src="<%= product.img %>"/>
+                </div>
+                <div class="catalog__item-subtitle cart__item_bought"><%= product.model %></div>
+                <div class="catalog__item-descr cart__item_bought"><%= product.descr %></div>
+              </div>
+              <div class="catalog__item-footerBag">
+                <div class="catalog__item-pricesBag">
+                  <div class="price-for-basket cart__item_bought"><%= product.price %></div>
+                  <div class="catalog__item-pricesBag cart__item_bought">руб.</div>
+                </div>
+                <div class="forCounter">
+                  
+                    <div class="counter">
+                      <div class="counterBtn">
+                      <button type="button" class="jsDecrease" onclick="decrease(<%= product.id %>)">-</button>
+                      <input
+                          type="text"
+                          class="jsValue"
+                          value="1"
+                          data-price="1000"
+                          maxlength="4"
+                      />
+                      <button type="button" class="jsIncrease" onclick="increase(<%= product.id %>)">+</button>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+            <%  }); %>
+        </div>
+        <div class="cart__footer">
+          <div class="forButton">
+            <button class="closeButton"><a class="closeButtonLink" href="/">Закрыть</a></button>
+            <button class="buyButton">Купить</button>
+          </div>
+          <div class="total__price">Итого: <span id="coast">0</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<%- include('../fragments/footer.ejs'); %> 

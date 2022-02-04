@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
-import { ActivatedRoute, ParamMap} from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { Router } from '@angular/router';
 
@@ -11,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   search = '';
-
   products!: Product[];
 
   constructor(protected productService: ProductService,
@@ -24,7 +22,6 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
-
 
   ngOnInit(): void {
 

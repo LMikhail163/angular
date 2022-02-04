@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "img": "https://wmpics.pics/dm-AFAR.png",
+        "model": "Apple Watch1",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 10000
+    },
+    {
+        "id": 2,
+        "img": "https://wmpics.pics/dm-857S.png",
+        "model": "Apple Watch2",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 11000
+    },
+    {
+        "id": 3,
+        "img": "https://wmpics.pics/dm-857S.png",
+        "model": "Apple Watch3",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 11000
+    },
+    {
+        "id": 4,
+        "img": "https://wmpics.pics/dm-AFAR.png",
+        "model": "Apple Watch4",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 12000
+    },
+    {
+        "id": 5,
+        "img": "https://wmpics.pics/dm-857S.png",
+        "model": "Apple Watch5",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 11000
+    },
+    {
+        "id": 6,
+        "img": "https://wmpics.pics/dm-AFAR.png",
+        "model": "Apple Watch6",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 14000
+    },
+    {
+        "id": 7,
+        "img": "https://wmpics.pics/dm-857S.png",
+        "model": "Apple Watch7",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 11000
+    },
+    {
+        "id": 8,
+        "img": "https://wmpics.pics/dm-AFAR.png",
+        "model": "Apple Watch8",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 14000
+    },
+    {
+        "id": 9,
+        "img": "https://wmpics.pics/dm-AFAR.png",
+        "model": "Apple Watch9",
+        "descr": "Для первых шагов в тренировках, основанных на сердечном ритме",
+        "link": "Подробнее",
+        "price": 11000
+    }
+  ]
